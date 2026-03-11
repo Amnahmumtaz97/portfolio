@@ -44,7 +44,7 @@ export default function Contact() {
     }
     setStatus('loading');
     try {
-      await axios.post('/api/contact', form);
+      await axios.post('https://amnah-portfolio-server.vercel.app/api/contact', form);
       setStatus('success');
       setForm({ name: '', email: '', message: '' });
     } catch {
