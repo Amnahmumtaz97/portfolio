@@ -6,9 +6,11 @@ require('dotenv').config();
 const app = express();
 app.use(cors({
   origin: 'https://portfolio-chi-lac-76.vercel.app',
-  methods: ['GET', 'POST'],
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
+app.options('*', cors());
 // MongoDB Contact Message Schema
 const messageSchema = new mongoose.Schema({
   name: { type: String, required: true },
