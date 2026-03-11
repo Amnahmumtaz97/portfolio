@@ -1,0 +1,137 @@
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 820px;
+}
+
+.exp-item {
+  display: flex;
+  gap: 24px;
+}
+
+.exp-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.exp-dot {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(232,197,71,0.12);
+  border: 2px solid #e8c547;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e8c547;
+  flex-shrink: 0;
+}
+
+.exp-track {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(180deg, #e8c547, transparent);
+  margin-top: 8px;
+}
+
+.exp-card {
+  background: #12121f;
+  border: 1px solid #1e1e30;
+  border-radius: 14px;
+  padding: 32px;
+  flex: 1;
+  margin-bottom: 32px;
+  transition: all 0.3s;
+}
+
+.exp-card:hover {
+  border-color: rgba(232,197,71,0.3);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.exp-role {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.exp-company {
+  font-size: 0.9rem;
+  color: #e8c547;
+  font-weight: 500;
+}
+
+.exp-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.exp-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #707090;
+}
+
+.exp-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.exp-bullets li {
+  font-size: 0.88rem;
+  color: #707090;
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.exp-bullets li::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  color: #5ee8b0;
+  font-size: 0.5rem;
+  top: 6px;
+}
+
+.exp-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exp-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: rgba(232,197,71,0.07);
+  border: 1px solid rgba(232,197,71,0.2);
+  color: #e8c547;
+  font-family: 'Outfit', sans-serif;
+}
+
+@media (max-width: 600px) {
+  .exp-meta { align-items: flex-start; }
+}

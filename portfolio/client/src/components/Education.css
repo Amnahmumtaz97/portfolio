@@ -1,0 +1,151 @@
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 900px;
+}
+
+.edu-card {
+  background: #12121f;
+  border: 1px solid #1e1e30;
+  border-radius: 14px;
+  padding: 36px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: all 0.3s;
+}
+
+.edu-card:hover {
+  border-color: rgba(232,197,71,0.3);
+  transform: translateY(-3px);
+}
+
+.edu-card-icon {
+  width: 50px; height: 50px;
+  border-radius: 12px;
+  background: rgba(232,197,71,0.1);
+  border: 1px solid rgba(232,197,71,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e8c547;
+  flex-shrink: 0;
+}
+
+.edu-degree {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.edu-school {
+  font-size: 0.88rem;
+  color: #e8c547;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.edu-campus, .edu-date {
+  font-size: 0.8rem;
+  color: #707090;
+  margin-bottom: 2px;
+}
+
+.gpa-row { margin-top: 14px; }
+
+.gpa-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(94,232,176,0.1);
+  border: 1px solid rgba(94,232,176,0.25);
+  color: #5ee8b0;
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Certs */
+.certs-card {
+  background: #12121f;
+  border: 1px solid #1e1e30;
+  border-radius: 14px;
+  padding: 36px;
+  transition: all 0.3s;
+}
+
+.certs-card:hover {
+  border-color: rgba(232,197,71,0.3);
+  transform: translateY(-3px);
+}
+
+.certs-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+  color: #e8c547;
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cert-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #1e1e30;
+}
+
+.cert-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.cert-logo {
+  width: 36px; height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: brightness(1.2);
+}
+
+.cert-icon-placeholder {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  width: 36px;
+  text-align: center;
+}
+
+.cert-name {
+  font-size: 0.9rem;
+  color: #ddddf0;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.cert-issuer {
+  font-size: 0.78rem;
+  color: #e8c547;
+  margin-bottom: 4px;
+}
+
+.cert-desc {
+  font-size: 0.78rem;
+  color: #707090;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .edu-grid { grid-template-columns: 1fr; }
+  .edu-card { flex-direction: column; }
+}

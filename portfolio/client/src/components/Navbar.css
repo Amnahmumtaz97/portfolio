@@ -1,0 +1,91 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 22px 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(8, 8, 16, 0.92);
+  backdrop-filter: blur(20px);
+  padding: 16px 6vw;
+  border-bottom: 1px solid #1e1e30;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.4);
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+}
+
+.nav-logo .dot { color: #e8c547; }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.83rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #707090;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: #e8c547; }
+
+.nav-gh {
+  border: 1px solid #e8c547 !important;
+  color: #e8c547 !important;
+  padding: 7px 18px;
+  border-radius: 6px;
+  transition: all 0.2s !important;
+}
+
+.nav-gh:hover {
+  background: #e8c547 !important;
+  color: #080810 !important;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #ddddf0;
+  cursor: pointer;
+  padding: 4px;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: rgba(8,8,16,0.98);
+    border-bottom: 1px solid #1e1e30;
+    flex-direction: column;
+    padding: 28px;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .nav-links.open { display: flex; }
+}
