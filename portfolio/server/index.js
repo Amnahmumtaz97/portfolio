@@ -4,15 +4,11 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-// Replace this:
-app.use(cors());
-
-// With this:
 app.use(cors({
   origin: 'https://portfolio-chi-lac-76.vercel.app',
   methods: ['GET', 'POST'],
-}));app.use(express.json());
-
+  credentials: true
+}));
 // MongoDB Contact Message Schema
 const messageSchema = new mongoose.Schema({
   name: { type: String, required: true },
