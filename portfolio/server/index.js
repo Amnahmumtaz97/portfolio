@@ -22,7 +22,11 @@ const messageSchema = new mongoose.Schema({
 const Message = mongoose.model('Message', messageSchema);
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/portfolio')
+if (!process.env.MONGO_URI) {
+  console.error('❌ MONGO_URI environment variable is not set');
+  process.exit(1);
+}
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('✅ MongoDB connected'))
   .catch(err => console.log('MongoDB error:', err));
 
